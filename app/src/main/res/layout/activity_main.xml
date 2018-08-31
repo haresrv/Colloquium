@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/home"
+    >
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -81,10 +83,23 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="13dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        app:srcCompat="@drawable/login" />
+        android:layout_marginBottom="104dp"
+        android:layout_marginStart="55dp"
+        android:onClick="Signin"
+        app:srcCompat="@drawable/login"
+        android:layout_marginLeft="55dp"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="154dp"
+        android:text="Register"
+        android:onClick="userReg"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="154dp" />
 
 </RelativeLayout>

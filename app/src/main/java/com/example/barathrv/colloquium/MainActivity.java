@@ -24,21 +24,25 @@ Button bt;
         EditText pass=(EditText)findViewById(R.id.editText3);
         String username=user.getText().toString();
         String password=pass.getText().toString();
+
+
         if(username.equals("root")&&password.equals("toor")) {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
             TimeUnit.SECONDS.sleep(2);
             init();
-        }.
+        }
         else
             Toast.makeText(this, "Wrong Credentials.", Toast.LENGTH_SHORT).show();
         }
+
+
 public void init()
 {
     bt=(Button) findViewById(R.id.button);
     bt.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent x=new Intent(MainActivity.this,Second.class);
+            Intent x=new Intent(MainActivity.this,MainPage.class);
             startActivity(x);
         }
     });
@@ -62,5 +66,13 @@ public void init()
                 }
             }
         });
+    }
+    public void userReg(View v)
+    {
+        startActivity(new Intent(this,Second.class));
+    }
+    public void Signin(View v)
+    {
+        startActivity(new Intent(this,MainPage.class));
     }
 }
